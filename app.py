@@ -24,6 +24,7 @@ def health():
 
 
 if __name__ == "__main__":
-    # Databricks Apps sets PORT; default to 8000 for local testing.
-    port = int(os.environ.get("PORT", 8000))
+    # Databricks Apps injects the port to listen on as DATABRICKS_APP_PORT —
+    # not a generic PORT var. Falls back to 8000 for local testing.
+    port = int(os.environ.get("DATABRICKS_APP_PORT", 8000))
     app.run(host="0.0.0.0", port=port)
