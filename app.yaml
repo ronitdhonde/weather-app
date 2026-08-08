@@ -1,0 +1,7 @@
+command: ["python", "app.py"]
+
+env:
+  - name: WEATHER_USER_AGENT_APP
+    value: "lakebase-weather-app"
+  - name: WEATHER_USER_AGENT_EMAIL
+    value: "you@yourdomain.com"
